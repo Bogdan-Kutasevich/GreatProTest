@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="main.css" />
+    <title>GreatProTest</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Your Website Name</h1>
+    </header>
+    <div class="pricing-table">
+      <h2>Pricing Plans</h2>
+      <table class="plans-table">
+        <tr>
+          <th></th>
+          <th>Basic</th>
+          <th>Standard</th>
+          <th>Premium</th>
+        </tr>
+        <tr>
+          <td>Price</td>
+          <td data-monthly="$9.99" data-yearly="$99.99">
+            Monthly: $9.99
+            <div class="toggle-switch">
+              <input id="toggle-switch" class="toggle-switch-checkbox" type="checkbox" />
+              <label for="toggle-switch" class="toggle-switch-label">
+                <span class="toggle-switch-inner"></span>
+                <span class="toggle-switch-switch"></span>
+              </label>
+              <span class="toggle-switch-text"></span>
+            </div>
+          </td>
+          <td data-monthly="$19.99" data-yearly="$199.99">
+            Monthly: $19.99
+            <div class="toggle">
+              <input type="radio" id="basic-monthly" name="billing-basic" checked />
+              <label for="basic-monthly" class="toggle-label">Monthly</label>
+              <input type="radio" id="basic-yearly" name="billing-basic" />
+              <label for="basic-yearly" class="toggle-label">Yearly</label>
+            </div>
+          </td>
+          <td data-monthly="$29.99" data-yearly="$299.99" rf>
+            console.log(1) Monthly: $29.99
+            <div class="toggle">
+              <input type="radio" id="basic-monthly" name="billing-basic" checked />
+              <label for="basic-monthly" class="toggle-label">Monthly</label>
+              <input type="radio" id="basic-yearly" name="billing-basic" />
+              <label for="basic-yearly" class="toggle-label">Yearly</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Feature 1</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>Feature 2</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>Feature 3</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>Sign Up</td>
+          <td><button>Sign Up</button></td>
+          <td><button>Sign Up</button></td>
+          <td><button>Sign Up</button></td>
+        </tr>
+      </table>
+    </div>
+    <footer>
+      <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
