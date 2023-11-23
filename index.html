@@ -9,77 +9,151 @@
   </head>
   <body>
     <header class="header">
-      <h1>Your Website Name</h1>
+      <div class="mainContainer header__properties">
+        <div class="header__info">
+          <img src="./assets/logo.png" alt="logo" class="header__info-logo" />
+          <h1 class="header__info-title">GreatProTest</h1>
+        </div>
+        <nav class="header__navigation">
+          <ul class="header__navigation-list">
+            <li class="header__navigation-listItem">
+              <a class="header__navigation-listLink">Home</a>
+            </li>
+            <li class="header__navigation-listItem header__navigation-listItem--active">
+              <a class="header__navigation-listLink">Pricing</a>
+            </li>
+            <li class="header__navigation-listItem">
+              <a class="header__navigation-listLink">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <div class="pricing-table">
-      <h2>Pricing Plans</h2>
-      <table class="plans-table">
-        <tr>
-          <th></th>
-          <th>Basic</th>
-          <th>Standard</th>
-          <th>Premium</th>
-        </tr>
-        <tr>
-          <td>Price</td>
-          <td data-monthly="$9.99" data-yearly="$99.99">
-            Monthly: $9.99
-            <div class="toggle-switch">
-              <input id="toggle-switch" class="toggle-switch-checkbox" type="checkbox" />
-              <label for="toggle-switch" class="toggle-switch-label">
-                <span class="toggle-switch-inner"></span>
-                <span class="toggle-switch-switch"></span>
-              </label>
-              <span class="toggle-switch-text"></span>
-            </div>
-          </td>
-          <td data-monthly="$19.99" data-yearly="$199.99">
-            Monthly: $19.99
-            <div class="toggle">
-              <input type="radio" id="basic-monthly" name="billing-basic" checked />
-              <label for="basic-monthly" class="toggle-label">Monthly</label>
-              <input type="radio" id="basic-yearly" name="billing-basic" />
-              <label for="basic-yearly" class="toggle-label">Yearly</label>
-            </div>
-          </td>
-          <td data-monthly="$29.99" data-yearly="$299.99" rf>
-            console.log(1) Monthly: $29.99
-            <div class="toggle">
-              <input type="radio" id="basic-monthly" name="billing-basic" checked />
-              <label for="basic-monthly" class="toggle-label">Monthly</label>
-              <input type="radio" id="basic-yearly" name="billing-basic" />
-              <label for="basic-yearly" class="toggle-label">Yearly</label>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>Feature 1</td>
-          <td>&#10003;</td>
-          <td>&#10003;</td>
-          <td>&#10003;</td>
-        </tr>
-        <tr>
-          <td>Feature 2</td>
-          <td>&#10003;</td>
-          <td>&#10003;</td>
-          <td>&#10003;</td>
-        </tr>
-        <tr>
-          <td>Feature 3</td>
-          <td>&#10007;</td>
-          <td>&#10003;</td>
-          <td>&#10003;</td>
-        </tr>
-        <tr>
-          <td>Sign Up</td>
-          <td><button>Sign Up</button></td>
-          <td><button>Sign Up</button></td>
-          <td><button>Sign Up</button></td>
-        </tr>
-      </table>
-    </div>
+
+    <section class="pricing">
+      <div class="mainContainer pricing__properties">
+        <h2 class="pricing__title">Pricing Plans</h2>
+        <table class="pricing__table">
+          <tr class="pricing__tr">
+            <th class="pricing__th pricing__th--radius-left"></th>
+            <th class="pricing__th">Basic</th>
+            <th class="pricing__th">Standard &#9734;</th>
+            <th class="pricing__th pricing__th--radius-right">Premium &#9733;</th>
+          </tr>
+          <tr class="pricing__tr">
+            <td class="pricing__td"></td>
+            <td class="pricing__td" data-monthly="$9.99" data-yearly="$99.99">
+              <div class="pricing__td-switch">
+                <p
+                  class="pricing__td-switch-during pricing__td-switch-during-monthly-basic pricing__td-switch-during--active"
+                >
+                  Monthly
+                </p>
+                <label class="switch">
+                  <input type="checkbox" id="toggleSwitchBasic" />
+                  <span class="switch__slider"></span>
+                </label>
+                <p class="pricing__td-switch-during pricing__td-switch-during-yearly-basic">Yearly</p>
+              </div>
+            </td>
+
+            <td class="pricing__td" data-monthly="$19.99" data-yearly="$199.99">
+              <div class="pricing__td-price">
+                <div class="pricing__td-switch">
+                  <p class="pricing__td-switch-during">Monthly</p>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="switch__slider"></span>
+                  </label>
+                  <p class="pricing__td-switch-during pricing__td-switch-during--active">Yearly</p>
+                </div>
+              </div>
+            </td>
+            <td class="pricing__td" data-monthly="$29.99" data-yearly="$299.99" rf>
+              <div class="pricing__td-price">
+                <div class="pricing__td-switch">
+                  <p class="pricing__td-switch-during">Monthly</p>
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="switch__slider"></span>
+                  </label>
+                  <p class="pricing__td-switch-during pricing__td-switch-during--active">Yearly</p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="pricing__tr">
+            <td class="pricing__td">
+              <p class="pricing__td-price-title">Price</p>
+            </td>
+            <td class="pricing__td">
+              <p class="pricing__td-total pricing__td-total--basic" data-monthlyBasic="$9.99" data-yearlyBasic="$99.99">
+                $9.99
+              </p>
+            </td>
+            <td class="pricing__td" data-monthly="$19.99" data-yearly="$199.99">
+              <p class="pricing__td-total pricing__td-total--standart">$9.99</p>
+            </td>
+            <td class="pricing__td" data-monthly="$29.99" data-yearly="$299.99" rf>
+              <p class="pricing__td-total pricing__td-total--premium">$9.99</p>
+            </td>
+          </tr>
+          <tr class="pricing__tr">
+            <td class="pricing__td">
+              <p class="pricing__td-feature">Unlimited use</p>
+            </td>
+            <td class="pricing__td">
+              <p class="pricing__td-access">&#10003;</p>
+            </td>
+            <td class="pricing__td">
+              <p class="pricing__td-access">&#10007;</p>
+            </td>
+            <td class="pricing__td">
+              <p class="pricing__td-access">&#10007;</p>
+            </td>
+          </tr>
+          <tr class="pricing__tr">
+            <td class="pricing__td">
+              <p class="pricing__td-feature">24/7 support</p>
+            </td>
+            <td class="pricing__td">
+              <p class="pricing__td-access">&#10003;</p>
+            </td>
+            <td class="pricing__td">
+              <p class="pricing__td-access">&#10003;</p>
+            </td>
+            <td class="pricing__td">
+              <p class="pricing__td-access">&#10003;</p>
+            </td>
+          </tr>
+          <tr class="pricing__tr">
+            <td class="pricing__td">
+              <p class="pricing__td-feature">Use of our storage</p>
+            </td>
+            <td class="pricing__td">
+              <p class="pricing__td-access">&#10003;</p>
+            </td>
+            <td class="pricing__td">
+              <p class="pricing__td-access">&#10003;</p>
+            </td>
+            <td class="pricing__td">
+              <p class="pricing__td-access">&#10003;</p>
+            </td>
+          </tr>
+          <tr class="pricing__tr">
+            <td class="pricing__td"></td>
+            <td class="pricing__td"><button class="pricing__button">Sign Up</button></td>
+            <td class="pricing__td"><button class="pricing__button">Sign Up</button></td>
+            <td class="pricing__td"><button class="pricing__button">Sign Up</button></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
     <footer>
       <p>&copy; 2023 Your Company Name. All rights reserved.</p>
     </footer>
+
+    <script src="./main.js"></script>
   </body>
 </html>

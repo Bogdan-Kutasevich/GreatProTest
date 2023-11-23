@@ -1,0 +1,56 @@
+// styles.scss
+@import './styles/_switcher';
+@import './styles/_variables';
+@import './styles/_header';
+@import './styles/_pricing';
+@import './styles/mixins/_mediaMixins';
+
+body {
+  background-color: $body-background-color;
+  color: $body-color;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100vw;
+}
+
+.mainContainer {
+  width: 1400px;
+  margin: 0 auto;
+  padding: 5px 10px;
+
+  @include _1400 {
+    width: 1200px;
+  }
+
+  @include _1200 {
+    width: 1024px;
+  }
+
+  @include _1024 {
+    width: 768px;
+  }
+
+  @include _768 {
+    width: 600px;
+  }
+
+  @include _600 {
+    width: 480px;
+  }
+
+  @include _480 {
+    width: 360px;
+  }
+}
+
+footer {
+  background-color: $footer-background-color;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+

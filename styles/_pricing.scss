@@ -1,0 +1,133 @@
+@import '_variables';
+@import 'mixins/_mediaMixins';
+
+.pricing {
+    margin-top: 30px;
+    height: 100%;
+    
+
+    &__properties {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 2.2rem;
+    }
+
+    &__table {
+        border-collapse: collapse;
+        border-radius: 15px;
+        border-style: hidden;
+        box-shadow: 0 0 0 2px $primary-main-color;
+        margin-top: 20px;
+        margin-bottom: 100px;
+    }
+
+    &__table th, &__table td {
+        border: 1px solid $primary-light-color;
+        padding: 30px;
+        text-align: center;
+        @include _1024 {
+            padding: 20px;
+        }  
+    }
+
+    &__button {
+        background-color: $primary-button-color;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        @include _768 {
+            font-size: 1rem;
+        }
+      
+        &:hover {
+          background-color: $primary-light-color;
+        }
+    }
+
+    &__th {
+        font-size: 1.6rem;
+
+        @include _1200 {
+            font-size: 1.2rem;
+        }
+
+        @include _768 {
+            font-size: 1rem;
+        }
+
+        background-color: $primary-light-color;
+        
+        &--radius-left {
+            border-top-left-radius: 15px;
+        }
+
+        &--radius-right {
+            border-top-right-radius: 15px;
+        }
+    }
+
+    &__td {
+        font-size: 1.2rem;
+        text-align: center; 
+        vertical-align: middle;
+
+        &-switch {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            @include _1200 {
+                gap: 10px;
+            }
+
+            @include _1024 {
+                flex-direction: column;
+            }
+
+        }
+
+        &-switch-during {
+            font-weight: 600;
+            color: white;
+
+            &--active {
+                color: $primary-main-color
+            }
+            @include _1200 {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+        }
+
+
+
+        &-total {
+            font-weight: 600;
+            font-size: 1.6rem;
+            @include _1024 {
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+        }
+
+        &-feature, &-price-title {
+            @include _600 {
+                writing-mode: vertical-rl;
+                text-orientation: upright;
+                text-align: left;
+              }
+        }
+       
+    }
+}
+  
