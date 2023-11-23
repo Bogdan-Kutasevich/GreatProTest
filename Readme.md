@@ -1,1 +1,1 @@
-Test
+Responsive price table.
