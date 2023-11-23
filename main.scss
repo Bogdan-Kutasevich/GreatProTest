@@ -7,7 +7,7 @@
 
 body {
   background-color: $body-background-color;
-  color: $body-color;
+  color: $primary-white-color;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -43,14 +43,8 @@ body {
   @include _480 {
     width: 360px;
   }
-}
 
-footer {
-  background-color: $footer-background-color;
-  padding: 10px;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  @include _360 {
+    width: 320px;
+  }
 }
-

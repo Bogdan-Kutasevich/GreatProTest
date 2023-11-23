@@ -42,11 +42,9 @@
           </tr>
           <tr class="pricing__tr">
             <td class="pricing__td"></td>
-            <td class="pricing__td" data-monthly="$9.99" data-yearly="$99.99">
+            <td class="pricing__td">
               <div class="pricing__td-switch">
-                <p
-                  class="pricing__td-switch-during pricing__td-switch-during-monthly-basic pricing__td-switch-during--active"
-                >
+                <p class="pricing__td-switch-during pricing__td-switch-during-monthly-basic pricing__td--active">
                   Monthly
                 </p>
                 <label class="switch">
@@ -57,28 +55,28 @@
               </div>
             </td>
 
-            <td class="pricing__td" data-monthly="$19.99" data-yearly="$199.99">
-              <div class="pricing__td-price">
-                <div class="pricing__td-switch">
-                  <p class="pricing__td-switch-during">Monthly</p>
-                  <label class="switch">
-                    <input type="checkbox" />
-                    <span class="switch__slider"></span>
-                  </label>
-                  <p class="pricing__td-switch-during pricing__td-switch-during--active">Yearly</p>
-                </div>
+            <td class="pricing__td">
+              <div class="pricing__td-switch">
+                <p class="pricing__td-switch-during pricing__td-switch-during-monthly-standart pricing__td--active">
+                  Monthly
+                </p>
+                <label class="switch">
+                  <input type="checkbox" id="toggleSwitchStandart" />
+                  <span class="switch__slider"></span>
+                </label>
+                <p class="pricing__td-switch-during pricing__td-switch-during-yearly-standart">Yearly</p>
               </div>
             </td>
-            <td class="pricing__td" data-monthly="$29.99" data-yearly="$299.99" rf>
-              <div class="pricing__td-price">
-                <div class="pricing__td-switch">
-                  <p class="pricing__td-switch-during">Monthly</p>
-                  <label class="switch">
-                    <input type="checkbox" />
-                    <span class="switch__slider"></span>
-                  </label>
-                  <p class="pricing__td-switch-during pricing__td-switch-during--active">Yearly</p>
-                </div>
+            <td class="pricing__td">
+              <div class="pricing__td-switch">
+                <p class="pricing__td-switch-during pricing__td-switch-during-monthly-premium pricing__td--active">
+                  Monthly
+                </p>
+                <label class="switch">
+                  <input type="checkbox" id="toggleSwitchPremium" />
+                  <span class="switch__slider"></span>
+                </label>
+                <p class="pricing__td-switch-during pricing__td-switch-during-yearly-premium">Yearly</p>
               </div>
             </td>
           </tr>
@@ -91,11 +89,23 @@
                 $9.99
               </p>
             </td>
-            <td class="pricing__td" data-monthly="$19.99" data-yearly="$199.99">
-              <p class="pricing__td-total pricing__td-total--standart">$9.99</p>
+            <td class="pricing__td">
+              <p
+                class="pricing__td-total pricing__td-total--standart"
+                data-monthlyStandart="$19.99"
+                data-yearlyStandart="$199.99"
+              >
+                $19.99
+              </p>
             </td>
-            <td class="pricing__td" data-monthly="$29.99" data-yearly="$299.99" rf>
-              <p class="pricing__td-total pricing__td-total--premium">$9.99</p>
+            <td class="pricing__td">
+              <p
+                class="pricing__td-total pricing__td-total--premium"
+                data-monthlyPremium="$29.99"
+                data-yearlyPremium="$299.99"
+              >
+                $29.99
+              </p>
             </td>
           </tr>
           <tr class="pricing__tr">
@@ -103,13 +113,13 @@
               <p class="pricing__td-feature">Unlimited use</p>
             </td>
             <td class="pricing__td">
-              <p class="pricing__td-access">&#10003;</p>
+              <p class="pricing__td-access pricing__td-access--positive">&#10003;</p>
             </td>
             <td class="pricing__td">
-              <p class="pricing__td-access">&#10007;</p>
+              <p class="pricing__td-access pricing__td-access--positive">&#10003;</p>
             </td>
             <td class="pricing__td">
-              <p class="pricing__td-access">&#10007;</p>
+              <p class="pricing__td-access pricing__td-access--positive">&#10003;</p>
             </td>
           </tr>
           <tr class="pricing__tr">
@@ -117,13 +127,13 @@
               <p class="pricing__td-feature">24/7 support</p>
             </td>
             <td class="pricing__td">
-              <p class="pricing__td-access">&#10003;</p>
+              <p class="pricing__td-access pricing__td-access--negative">&#10007;</p>
             </td>
             <td class="pricing__td">
-              <p class="pricing__td-access">&#10003;</p>
+              <p class="pricing__td-access pricing__td-access--positive">&#10003;</p>
             </td>
             <td class="pricing__td">
-              <p class="pricing__td-access">&#10003;</p>
+              <p class="pricing__td-access pricing__td-access--positive">&#10003;</p>
             </td>
           </tr>
           <tr class="pricing__tr">
@@ -131,13 +141,13 @@
               <p class="pricing__td-feature">Use of our storage</p>
             </td>
             <td class="pricing__td">
-              <p class="pricing__td-access">&#10003;</p>
+              <p class="pricing__td-access pricing__td-access--negative">&#10007;</p>
             </td>
             <td class="pricing__td">
-              <p class="pricing__td-access">&#10003;</p>
+              <p class="pricing__td-access pricing__td-access--negative">&#10007;</p>
             </td>
             <td class="pricing__td">
-              <p class="pricing__td-access">&#10003;</p>
+              <p class="pricing__td-access pricing__td-access--positive">&#10003;</p>
             </td>
           </tr>
           <tr class="pricing__tr">
@@ -149,10 +159,6 @@
         </table>
       </div>
     </section>
-
-    <footer>
-      <p>&copy; 2023 Your Company Name. All rights reserved.</p>
-    </footer>
 
     <script src="./main.js"></script>
   </body>
